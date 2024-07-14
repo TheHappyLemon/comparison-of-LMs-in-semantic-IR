@@ -1,0 +1,10 @@
+{
+	"distiluse-base-v2" : "distiluse-base-multilingual-cased-v2",
+	"distiluse-base" : "distiluse-base-multilingual-cased",
+	"paraphrase-MiniLM-L12" : "paraphrase-multilingual-MiniLM-L12-v2",
+	"paraphrase-mpnet" : "paraphrase-multilingual-mpnet-base-v2",
+	"LaBSE" : "LaBSE",
+	"E5_small" : "intfloat/multilingual-e5-small",
+	"E5_base" : "intfloat/multilingual-e5-base",
+	"E5_large" : "intfloat/multilingual-e5-large"
+}
