@@ -8,7 +8,6 @@
 
 REPO_URL="https://github.com/TheHappyLemon/comparison-of-LLMs-in-semantic-IR.git"
 CODE_DIR="./Code"
-VENV_NAME="sonar_env"
 PYTHON_SCRIPT="generate_embeddings_sonar.py"
 
 # -- Switching to the directory from which the "qsub" command was run, moving to actual working directory
@@ -20,7 +19,6 @@ echo Working directory is: $PBS_O_WORKDIR
 NPROCS=`wc -l < $PBS_NODEFILE`
 NNODES=`uniq $PBS_NODEFILE | wc -l`
 
-
 # -- Displaying job information
 echo Running on host `hostname`
 echo Time is `date`
@@ -31,29 +29,31 @@ cat $PBS_NODEFILE
 echo "---------------------"
 echo Using ${NPROCS} processors across ${NNODES} nodes
 
-module load git
-git clone $REPO_URL
-REPO_NAME=$(basename $REPO_URL .git)
-
-# Check if the repo was cloned successfully
 if [ ! -d "$REPO_NAME" ]; then
-    echo "Failed to clone the repository."
-    exit 1
+    echo "Cloning repository!"
+    module load git
+    git clone $REPO_URL
+    REPO_NAME=$(basename $REPO_URL .git)
+    echo "Cloned repo!"
 fi
-echo "Cloned repo!"
 
+echo Changing directory to $REPO_NAME
 cd $REPO_NAME
-python3 -m venv $VENV_NAME
-source $VENV_NAME/bin/activate
-echo "Created virtual env!"
-
-pip install fairseq2
-pip install sonar-space
-pip install h5py
-echo "Installed modules!"
+module load anaconda/conda-23.1.0
+conda activate conda_env_sonar
 
 cd $CODE_DIR
 python3 $PYTHON_SCRIPT
 
-deactivate
+conda deactivate
 echo "Script execution completed."
+
+# This all in conda env already!
+# pip install fairseq2
+# pip install sonar-space
+# pip install h5py
+# and also I need to have 'libsndfile1', because:
+# File "/mnt/beegfs2/home/artjom01/wrk/comparison-of-LLMs-in-semantic-IR/sonar_env/lib/python3.10/site-packages/fairseq2n/__init__.py", line 58, in _load_sndfile
+    #raise OSError(
+#OSError: libsndfile is not found! Since you are in a Conda environment, use `conda install -c conda-forge libsndfile==1.0.31` to install it.
+
