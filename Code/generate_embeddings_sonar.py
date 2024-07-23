@@ -76,7 +76,7 @@ def fill_hdf5_structure(file_name : str, model : str, types : list, languages : 
         wiki_pages_names = [fn[0].decode() for fn in wiki_pages_names] # because they are in binary format
 
     for language in languages:
-        src_lang = "eng_Latn" if language = "en_cirrussearch" else "lvs_Latn"
+        src_lang = "eng_Latn" if language == "en_cirrussearch" else "lvs_Latn"
         for type in types:
             sub_folder = language + "_" + type
 

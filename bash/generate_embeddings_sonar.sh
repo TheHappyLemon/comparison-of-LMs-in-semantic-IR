@@ -11,6 +11,27 @@ CODE_DIR="./Code"
 VENV_NAME="sonar_env"
 PYTHON_SCRIPT="generate_embeddings_sonar.py"
 
+# -- Switching to the directory from which the "qsub" command was run, moving to actual working directory
+# -- Make sure any symbolic links are resolved to absolute path 
+export PBS_O_WORKDIR=$(readlink -f $PBS_O_WORKDIR)  ##ag
+cd $PBS_O_WORKDIR
+echo Working directory is: $PBS_O_WORKDIR
+# --Calculate the number of processors and nodes allocated to this run.
+NPROCS=`wc -l < $PBS_NODEFILE`
+NNODES=`uniq $PBS_NODEFILE | wc -l`
+
+
+# -- Displaying job information
+echo Running on host `hostname`
+echo Time is `date`
+echo Current working directory is `pwd`
+echo "Node file: $PBS_NODEFILE :"
+echo "---------------------"
+cat $PBS_NODEFILE
+echo "---------------------"
+echo Using ${NPROCS} processors across ${NNODES} nodes
+
+module load git
 git clone $REPO_URL
 REPO_NAME=$(basename $REPO_URL .git)
 
