@@ -116,7 +116,6 @@ def fill_hdf5_structure(file_name : str, models : dict, types : list, languages 
                         embeddings = models[model].encode_multi_process(wiki_pages_data, pool, batch_size=BATCH_SIZE)
                         models[model].stop_multi_process_pool(pool)
                         dataset[i: i + BATCH_SIZE] = embeddings
-                        input("Waiting for you, sir!")
 
                         if i % 1000 == 0:
                             logger.info(f"Processed a thousand pages! Currently done: {i + len(wiki_pages_names_batch)}")
