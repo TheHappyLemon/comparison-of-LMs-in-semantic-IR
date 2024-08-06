@@ -36,6 +36,7 @@ if [ ! -d "$REPO_NAME" ]; then
     REPO_NAME=$(basename $REPO_URL .git)
     echo "Cloned repo!"
 fi
+git pull
 
 echo Changing directory to $REPO_NAME
 cd $REPO_NAME
