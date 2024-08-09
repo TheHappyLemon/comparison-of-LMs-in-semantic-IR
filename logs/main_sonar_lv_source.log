@@ -1,0 +1,122 @@
+2024-08-07 22:58:35,190 - __main__ - INFO - Created dataset '/SONAR/title/en_cirrussearch' with shape '77736x1024'
+2024-08-07 22:58:35,191 - __main__ - INFO - Created dataset '/SONAR/title/lv_cirrussearch' with shape '77736x1024'
+2024-08-07 22:58:35,191 - __main__ - INFO - Created dataset '/SONAR/open/en_cirrussearch' with shape '77736x1024'
+2024-08-07 22:58:35,192 - __main__ - INFO - Created dataset '/SONAR/open/lv_cirrussearch' with shape '77736x1024'
+2024-08-07 22:58:35,192 - __main__ - INFO - Created dataset '/SONAR/source/en_cirrussearch' with shape '77736x1024'
+2024-08-07 22:58:35,193 - __main__ - INFO - Created dataset '/SONAR/source/lv_cirrussearch' with shape '77736x1024'
+2024-08-07 22:58:35,213 - h5py._conv - DEBUG - Creating converter from 5 to 3
+2024-08-07 22:58:35,329 - __main__ - INFO - Created mapping dataset
+2024-08-07 22:58:35,343 - h5py._conv - DEBUG - Creating converter from 3 to 5
+2024-08-07 22:58:36,121 - __main__ - INFO - Transforming 'lv_cirrussearch_source' using 'SONAR'
+2024-08-07 22:58:36,122 - __main__ - INFO - Starting from row '0'
+2024-08-07 23:00:46,727 - __main__ - INFO - Processed a thousand pages!
+2024-08-07 23:19:28,749 - __main__ - INFO - Processed a thousand pages!
+2024-08-07 23:38:31,974 - __main__ - INFO - Processed a thousand pages!
+2024-08-08 00:01:38,673 - __main__ - INFO - Processed a thousand pages!
+2024-08-08 00:24:17,813 - __main__ - INFO - Processed a thousand pages!
+2024-08-08 00:45:27,397 - __main__ - INFO - Processed a thousand pages!
+2024-08-08 01:08:22,073 - __main__ - INFO - Processed a thousand pages!
+2024-08-08 01:30:53,417 - __main__ - INFO - Processed a thousand pages!
+2024-08-08 01:51:43,113 - __main__ - INFO - Processed a thousand pages!
+2024-08-08 02:12:17,877 - __main__ - INFO - Processed a thousand pages!
+2024-08-08 02:35:09,727 - __main__ - INFO - Processed a thousand pages!
+2024-08-08 02:57:51,323 - __main__ - INFO - Processed a thousand pages!
+2024-08-08 03:20:59,617 - __main__ - INFO - Processed a thousand pages!
+2024-08-08 03:40:54,343 - __main__ - INFO - Processed a thousand pages!
+2024-08-08 04:02:33,553 - __main__ - INFO - Processed a thousand pages!
+2024-08-08 04:24:33,291 - __main__ - INFO - Processed a thousand pages!
+2024-08-08 04:47:06,347 - __main__ - INFO - Processed a thousand pages!
+2024-08-08 05:10:56,733 - __main__ - INFO - Processed a thousand pages!
+2024-08-08 05:33:00,653 - __main__ - INFO - Processed a thousand pages!
+2024-08-08 05:56:02,997 - __main__ - INFO - Processed a thousand pages!
+2024-08-08 06:20:15,283 - __main__ - INFO - Processed a thousand pages!
+2024-08-08 06:42:56,847 - __main__ - INFO - Processed a thousand pages!
+2024-08-08 07:06:03,464 - __main__ - INFO - Processed a thousand pages!
+2024-08-08 07:30:08,187 - __main__ - INFO - Processed a thousand pages!
+2024-08-08 09:36:23,821 - h5py._conv - DEBUG - Creating converter from 3 to 5
+2024-08-08 09:36:24,583 - __main__ - INFO - Transforming 'lv_cirrussearch_source' using 'SONAR'
+2024-08-08 09:36:24,583 - __main__ - INFO - Starting from row '0'
+2024-08-08 09:38:12,017 - __main__ - INFO - Processed a thousand pages!
+2024-08-08 09:56:39,011 - __main__ - INFO - Processed a thousand pages!
+2024-08-08 10:14:45,819 - __main__ - INFO - Processed a thousand pages!
+2024-08-08 10:32:47,309 - __main__ - INFO - Processed a thousand pages!
+2024-08-08 10:51:13,498 - __main__ - INFO - Processed a thousand pages!
+2024-08-08 11:09:33,740 - __main__ - INFO - Processed a thousand pages!
+2024-08-08 11:28:03,331 - __main__ - INFO - Processed a thousand pages!
+2024-08-08 11:46:04,382 - __main__ - INFO - Processed a thousand pages!
+2024-08-08 12:04:32,793 - __main__ - INFO - Processed a thousand pages!
+2024-08-08 12:22:30,073 - __main__ - INFO - Processed a thousand pages!
+2024-08-08 12:40:43,712 - __main__ - INFO - Processed a thousand pages!
+2024-08-08 12:58:59,846 - __main__ - INFO - Processed a thousand pages!
+2024-08-08 13:17:25,330 - __main__ - INFO - Processed a thousand pages!
+2024-08-08 13:35:45,763 - __main__ - INFO - Processed a thousand pages!
+2024-08-08 13:53:56,152 - __main__ - INFO - Processed a thousand pages!
+2024-08-08 14:11:47,359 - __main__ - INFO - Processed a thousand pages!
+2024-08-08 14:29:43,916 - __main__ - INFO - Processed a thousand pages!
+2024-08-08 14:47:46,385 - __main__ - INFO - Processed a thousand pages!
+2024-08-08 15:05:45,304 - __main__ - INFO - Processed a thousand pages!
+2024-08-08 15:23:12,053 - __main__ - INFO - Processed a thousand pages!
+2024-08-08 19:09:37,412 - h5py._conv - DEBUG - Creating converter from 3 to 5
+2024-08-08 19:09:38,892 - __main__ - INFO - Transforming 'lv_cirrussearch_source' using 'SONAR'
+2024-08-08 19:09:38,893 - __main__ - INFO - Starting from row '19100'
+2024-08-08 19:22:55,269 - __main__ - INFO - Processed a thousand pages!
+2024-08-08 19:35:48,907 - __main__ - INFO - Processed a thousand pages!
+2024-08-08 19:48:40,096 - __main__ - INFO - Processed a thousand pages!
+2024-08-08 20:01:45,456 - __main__ - INFO - Processed a thousand pages!
+2024-08-08 20:15:36,978 - __main__ - INFO - Processed a thousand pages!
+2024-08-08 20:32:38,697 - __main__ - INFO - Processed a thousand pages!
+2024-08-08 20:50:30,788 - __main__ - INFO - Processed a thousand pages!
+2024-08-08 21:09:03,900 - __main__ - INFO - Processed a thousand pages!
+2024-08-08 21:25:34,167 - __main__ - INFO - Processed a thousand pages!
+2024-08-08 21:42:26,486 - __main__ - INFO - Processed a thousand pages!
+2024-08-08 21:59:03,456 - __main__ - INFO - Processed a thousand pages!
+2024-08-08 22:15:39,644 - __main__ - INFO - Processed a thousand pages!
+2024-08-08 22:32:02,081 - __main__ - INFO - Processed a thousand pages!
+2024-08-08 22:45:59,155 - __main__ - INFO - Processed a thousand pages!
+2024-08-08 23:00:05,542 - __main__ - INFO - Processed a thousand pages!
+2024-08-08 23:19:03,205 - __main__ - INFO - Processed a thousand pages!
+2024-08-08 23:37:21,162 - __main__ - INFO - Processed a thousand pages!
+2024-08-08 23:54:09,002 - __main__ - INFO - Processed a thousand pages!
+2024-08-09 00:11:09,851 - __main__ - INFO - Processed a thousand pages!
+2024-08-09 00:27:50,614 - __main__ - INFO - Processed a thousand pages!
+2024-08-09 00:44:14,363 - __main__ - INFO - Processed a thousand pages!
+2024-08-09 00:59:42,718 - __main__ - INFO - Processed a thousand pages!
+2024-08-09 01:15:42,446 - __main__ - INFO - Processed a thousand pages!
+2024-08-09 01:30:39,579 - __main__ - INFO - Processed a thousand pages!
+2024-08-09 01:45:30,882 - __main__ - INFO - Processed a thousand pages!
+2024-08-09 02:00:23,303 - __main__ - INFO - Processed a thousand pages!
+2024-08-09 02:15:37,185 - __main__ - INFO - Processed a thousand pages!
+2024-08-09 02:30:55,800 - __main__ - INFO - Processed a thousand pages!
+2024-08-09 02:46:24,421 - __main__ - INFO - Processed a thousand pages!
+2024-08-09 02:59:34,835 - __main__ - INFO - Processed a thousand pages!
+2024-08-09 03:14:48,093 - __main__ - INFO - Processed a thousand pages!
+2024-08-09 03:30:28,488 - __main__ - INFO - Processed a thousand pages!
+2024-08-09 03:46:55,424 - __main__ - INFO - Processed a thousand pages!
+2024-08-09 04:02:31,262 - __main__ - INFO - Processed a thousand pages!
+2024-08-09 04:17:36,848 - __main__ - INFO - Processed a thousand pages!
+2024-08-09 04:32:57,083 - __main__ - INFO - Processed a thousand pages!
+2024-08-09 04:47:54,754 - __main__ - INFO - Processed a thousand pages!
+2024-08-09 05:03:45,624 - __main__ - INFO - Processed a thousand pages!
+2024-08-09 05:19:59,893 - __main__ - INFO - Processed a thousand pages!
+2024-08-09 05:35:46,577 - __main__ - INFO - Processed a thousand pages!
+2024-08-09 05:50:48,343 - __main__ - INFO - Processed a thousand pages!
+2024-08-09 06:06:23,430 - __main__ - INFO - Processed a thousand pages!
+2024-08-09 06:21:01,182 - __main__ - INFO - Processed a thousand pages!
+2024-08-09 06:36:59,048 - __main__ - INFO - Processed a thousand pages!
+2024-08-09 06:52:18,931 - __main__ - INFO - Processed a thousand pages!
+2024-08-09 09:13:38,282 - h5py._conv - DEBUG - Creating converter from 3 to 5
+2024-08-09 09:13:40,300 - __main__ - INFO - Transforming 'lv_cirrussearch_source' using 'SONAR'
+2024-08-09 09:13:40,301 - __main__ - INFO - Starting from row '64100'
+2024-08-09 09:31:39,181 - __main__ - INFO - Processed a thousand pages!
+2024-08-09 09:50:03,535 - __main__ - INFO - Processed a thousand pages!
+2024-08-09 10:06:51,629 - __main__ - INFO - Processed a thousand pages!
+2024-08-09 10:24:39,117 - __main__ - INFO - Processed a thousand pages!
+2024-08-09 10:43:15,836 - __main__ - INFO - Processed a thousand pages!
+2024-08-09 11:01:22,031 - __main__ - INFO - Processed a thousand pages!
+2024-08-09 11:20:13,528 - __main__ - INFO - Processed a thousand pages!
+2024-08-09 11:39:10,966 - __main__ - INFO - Processed a thousand pages!
+2024-08-09 11:58:11,390 - __main__ - INFO - Processed a thousand pages!
+2024-08-09 12:16:22,637 - __main__ - INFO - Processed a thousand pages!
+2024-08-09 12:35:27,615 - __main__ - INFO - Processed a thousand pages!
+2024-08-09 12:54:35,072 - __main__ - INFO - Processed a thousand pages!
+2024-08-09 13:14:07,174 - __main__ - INFO - Processed a thousand pages!

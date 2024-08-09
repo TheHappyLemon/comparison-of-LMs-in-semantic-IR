@@ -1,4 +1,3 @@
 Code/constants.py
 Code/__pycache__
-Dataset/embeddings.hdf5
-Dataset/embeddings_sonar.hdf5
+Dataset/embeddings*.hdf5

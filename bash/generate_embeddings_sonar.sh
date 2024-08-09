@@ -5,10 +5,14 @@
 #PBS -l walltime=72:00:00
 #PBS -l nodes=1:ppn=8
 #PBS -j oe
+#PBS -W x=HOSTLIST:wn68
 
 REPO_URL="https://github.com/TheHappyLemon/comparison-of-LLMs-in-semantic-IR.git"
 CODE_DIR="./Code"
 PYTHON_SCRIPT="generate_embeddings_sonar.py"
+
+conda deactivate
+module purge
 
 # -- Switching to the directory from which the "qsub" command was run, moving to actual working directory
 # -- Make sure any symbolic links are resolved to absolute path 
@@ -29,32 +33,27 @@ cat $PBS_NODEFILE
 echo "---------------------"
 echo Using ${NPROCS} processors across ${NNODES} nodes
 
-if [ ! -d "$REPO_NAME" ]; then
-    echo "Cloning repository!"
-    module load git
-    git clone $REPO_URL
-    REPO_NAME=$(basename $REPO_URL .git)
-    echo "Cloned repo!"
-fi
-git pull
+echo "Cloning repository!"
+module load git
+git clone $REPO_URL
+REPO_NAME=$(basename $REPO_URL .git)
+echo "Cloned repo!"
 
 echo Changing directory to $REPO_NAME
 cd $REPO_NAME
-module load anaconda/conda-23.1.0
-conda activate conda_env_sonar
-
+git pull
 cd $CODE_DIR
-python3 $PYTHON_SCRIPT
+module load anaconda/conda-23.1.0
+source activate sonar_env
+
+python3 generate_embeddings_sonar.py
+echo "Current conda env info:" 
+echo $CONDA_DEFAULT_ENV
+echo $CONDA_PREFIX
+echo "try to check sonar version:"
+python3 -c "import sonar; print(sonar.__version__)"
 
 conda deactivate
+module purge
 echo "Script execution completed."
-
-# This all in conda env already!
-# pip install fairseq2
-# pip install sonar-space
-# pip install h5py
-# and also I need to have 'libsndfile1', because:
-# File "/mnt/beegfs2/home/artjom01/wrk/comparison-of-LLMs-in-semantic-IR/sonar_env/lib/python3.10/site-packages/fairseq2n/__init__.py", line 58, in _load_sndfile
-    #raise OSError(
-#OSError: libsndfile is not found! Since you are in a Conda environment, use `conda install -c conda-forge libsndfile==1.0.31` to install it.
 

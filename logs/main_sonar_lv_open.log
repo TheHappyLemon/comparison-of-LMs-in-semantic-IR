@@ -1,0 +1,89 @@
+2024-08-07 22:56:38,474 - __main__ - INFO - Created dataset '/SONAR/title/en_cirrussearch' with shape '77736x1024'
+2024-08-07 22:56:38,475 - __main__ - INFO - Created dataset '/SONAR/title/lv_cirrussearch' with shape '77736x1024'
+2024-08-07 22:56:38,476 - __main__ - INFO - Created dataset '/SONAR/open/en_cirrussearch' with shape '77736x1024'
+2024-08-07 22:56:38,476 - __main__ - INFO - Created dataset '/SONAR/open/lv_cirrussearch' with shape '77736x1024'
+2024-08-07 22:56:38,477 - __main__ - INFO - Created dataset '/SONAR/source/en_cirrussearch' with shape '77736x1024'
+2024-08-07 22:56:38,477 - __main__ - INFO - Created dataset '/SONAR/source/lv_cirrussearch' with shape '77736x1024'
+2024-08-07 22:56:38,497 - h5py._conv - DEBUG - Creating converter from 5 to 3
+2024-08-07 22:56:38,623 - __main__ - INFO - Created mapping dataset
+2024-08-07 22:56:38,634 - h5py._conv - DEBUG - Creating converter from 3 to 5
+2024-08-07 22:56:39,155 - __main__ - INFO - Transforming 'lv_cirrussearch_open' using 'SONAR'
+2024-08-07 22:56:39,156 - __main__ - INFO - Starting from row '0'
+2024-08-07 22:56:53,079 - __main__ - INFO - Processed a thousand pages!
+2024-08-07 22:59:26,822 - __main__ - INFO - Processed a thousand pages!
+2024-08-07 23:01:55,599 - __main__ - INFO - Processed a thousand pages!
+2024-08-07 23:04:14,537 - __main__ - INFO - Processed a thousand pages!
+2024-08-07 23:06:53,475 - __main__ - INFO - Processed a thousand pages!
+2024-08-07 23:09:44,429 - __main__ - INFO - Processed a thousand pages!
+2024-08-07 23:12:22,119 - __main__ - INFO - Processed a thousand pages!
+2024-08-07 23:14:44,780 - __main__ - INFO - Processed a thousand pages!
+2024-08-07 23:17:06,772 - __main__ - INFO - Processed a thousand pages!
+2024-08-07 23:19:34,690 - __main__ - INFO - Processed a thousand pages!
+2024-08-07 23:22:04,703 - __main__ - INFO - Processed a thousand pages!
+2024-08-07 23:24:34,336 - __main__ - INFO - Processed a thousand pages!
+2024-08-07 23:27:06,651 - __main__ - INFO - Processed a thousand pages!
+2024-08-07 23:29:29,280 - __main__ - INFO - Processed a thousand pages!
+2024-08-07 23:31:41,467 - __main__ - INFO - Processed a thousand pages!
+2024-08-07 23:34:54,883 - __main__ - INFO - Processed a thousand pages!
+2024-08-07 23:37:04,614 - __main__ - INFO - Processed a thousand pages!
+2024-08-07 23:39:43,452 - __main__ - INFO - Processed a thousand pages!
+2024-08-07 23:42:04,497 - __main__ - INFO - Processed a thousand pages!
+2024-08-07 23:44:27,450 - __main__ - INFO - Processed a thousand pages!
+2024-08-07 23:46:41,154 - __main__ - INFO - Processed a thousand pages!
+2024-08-07 23:52:30,477 - __main__ - INFO - Processed a thousand pages!
+2024-08-07 23:54:58,378 - __main__ - INFO - Processed a thousand pages!
+2024-08-07 23:57:18,134 - __main__ - INFO - Processed a thousand pages!
+2024-08-07 23:59:21,349 - __main__ - INFO - Processed a thousand pages!
+2024-08-08 00:01:26,432 - __main__ - INFO - Processed a thousand pages!
+2024-08-08 00:03:43,280 - __main__ - INFO - Processed a thousand pages!
+2024-08-08 00:06:57,356 - __main__ - INFO - Processed a thousand pages!
+2024-08-08 00:09:27,648 - __main__ - INFO - Processed a thousand pages!
+2024-08-08 00:11:55,324 - __main__ - INFO - Processed a thousand pages!
+2024-08-08 00:14:03,780 - __main__ - INFO - Processed a thousand pages!
+2024-08-08 00:16:22,802 - __main__ - INFO - Processed a thousand pages!
+2024-08-08 00:19:32,552 - __main__ - INFO - Processed a thousand pages!
+2024-08-08 00:21:11,750 - __main__ - INFO - Processed a thousand pages!
+2024-08-08 00:22:44,836 - __main__ - INFO - Processed a thousand pages!
+2024-08-08 00:28:29,348 - __main__ - INFO - Processed a thousand pages!
+2024-08-08 00:30:29,992 - __main__ - INFO - Processed a thousand pages!
+2024-08-08 00:32:33,596 - __main__ - INFO - Processed a thousand pages!
+2024-08-08 00:34:52,787 - __main__ - INFO - Processed a thousand pages!
+2024-08-08 00:37:06,092 - __main__ - INFO - Processed a thousand pages!
+2024-08-08 00:39:32,184 - __main__ - INFO - Processed a thousand pages!
+2024-08-08 00:42:06,734 - __main__ - INFO - Processed a thousand pages!
+2024-08-08 00:44:15,109 - __main__ - INFO - Processed a thousand pages!
+2024-08-08 00:45:56,518 - __main__ - INFO - Processed a thousand pages!
+2024-08-08 00:47:57,205 - __main__ - INFO - Processed a thousand pages!
+2024-08-08 00:49:38,976 - __main__ - INFO - Processed a thousand pages!
+2024-08-08 00:51:59,495 - __main__ - INFO - Processed a thousand pages!
+2024-08-08 00:53:58,523 - __main__ - INFO - Processed a thousand pages!
+2024-08-08 00:56:14,746 - __main__ - INFO - Processed a thousand pages!
+2024-08-08 00:58:06,161 - __main__ - INFO - Processed a thousand pages!
+2024-08-08 01:01:07,180 - __main__ - INFO - Processed a thousand pages!
+2024-08-08 01:05:15,945 - __main__ - INFO - Processed a thousand pages!
+2024-08-08 01:07:56,776 - __main__ - INFO - Processed a thousand pages!
+2024-08-08 01:09:53,104 - __main__ - INFO - Processed a thousand pages!
+2024-08-08 01:12:49,663 - __main__ - INFO - Processed a thousand pages!
+2024-08-08 01:14:50,331 - __main__ - INFO - Processed a thousand pages!
+2024-08-08 01:17:00,075 - __main__ - INFO - Processed a thousand pages!
+2024-08-08 01:19:31,860 - __main__ - INFO - Processed a thousand pages!
+2024-08-08 01:23:15,422 - __main__ - INFO - Processed a thousand pages!
+2024-08-08 01:25:31,573 - __main__ - INFO - Processed a thousand pages!
+2024-08-08 01:27:27,309 - __main__ - INFO - Processed a thousand pages!
+2024-08-08 01:29:30,953 - __main__ - INFO - Processed a thousand pages!
+2024-08-08 01:32:20,717 - __main__ - INFO - Processed a thousand pages!
+2024-08-08 01:34:28,674 - __main__ - INFO - Processed a thousand pages!
+2024-08-08 01:37:24,842 - __main__ - INFO - Processed a thousand pages!
+2024-08-08 01:39:43,296 - __main__ - INFO - Processed a thousand pages!
+2024-08-08 01:44:09,006 - __main__ - INFO - Processed a thousand pages!
+2024-08-08 01:46:32,957 - __main__ - INFO - Processed a thousand pages!
+2024-08-08 01:49:24,085 - __main__ - INFO - Processed a thousand pages!
+2024-08-08 01:52:06,950 - __main__ - INFO - Processed a thousand pages!
+2024-08-08 01:58:20,662 - __main__ - INFO - Processed a thousand pages!
+2024-08-08 02:00:44,865 - __main__ - INFO - Processed a thousand pages!
+2024-08-08 02:04:37,314 - __main__ - INFO - Processed a thousand pages!
+2024-08-08 02:06:53,507 - __main__ - INFO - Processed a thousand pages!
+2024-08-08 02:08:57,168 - __main__ - INFO - Processed a thousand pages!
+2024-08-08 02:11:39,387 - __main__ - INFO - Processed a thousand pages!
+2024-08-08 02:14:55,087 - __main__ - INFO - Processed a thousand pages!
+2024-08-08 02:17:35,629 - __main__ - INFO - Processed a thousand pages!

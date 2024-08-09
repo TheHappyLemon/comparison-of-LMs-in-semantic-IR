@@ -89,6 +89,9 @@ def fill_hdf5_structure(file_name : str, model : str, types : list, languages : 
                     continue
                 offset = offset[0]
                 
+                if sub_folder != "en_cirrussearch_title":
+                    continue
+                
                 logger.info(f"Transforming '{sub_folder}' using '{model}'")
                 logger.info(f"Starting from row '{offset}'")
 
