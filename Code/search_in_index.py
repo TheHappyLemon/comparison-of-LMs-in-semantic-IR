@@ -78,8 +78,7 @@ def search_in_dataset(path_to_csv : str, index : faiss.IndexHNSWFlat, query_data
         csv_writer.writeheader()
 
         for i in range(len(file[query_dataset])):
-            if i == 1:
-                break
+            
             csv_row = {}
             query_file  = file['mapping'][i][0].decode()
 
