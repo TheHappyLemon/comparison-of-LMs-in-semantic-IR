@@ -37,7 +37,6 @@ def build_index_from_hdf(file_path : str, dataset : str, index_type : str) -> fa
             exit()
         limit = file[dataset].shape[0]
         
-        #index_types   = ['FlatL2', 'FlatIP', 'HNSWFlat', 'IVFFlat'] 
         dimensions = file[dataset].shape[1]
         if index_type == 'FlatL2':
             index = faiss.IndexFlatL2(dimensions)
@@ -110,7 +109,7 @@ if __name__ == '__main__':
     logger    = logging.getLogger(__name__)
     hdf5_file = PATH_DATASET + "embeddings.hdf5"
     kNN       = [1, 5, 10, 20]
-    datasets = get_dataset_names(hdf5_file)
+    datasets  = get_dataset_names(hdf5_file)
     for index_type in index_types:
         
         if index_type == 'FlatL2':
