@@ -17,7 +17,7 @@ logging.basicConfig(
     level=logging.DEBUG,
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', 
     handlers=[
-        logging.FileHandler(PATH_LOGS + "search.log")
+        logging.FileHandler(PATH_LOGS + "search_LASER.log")
     ]
 )
 
@@ -55,13 +55,17 @@ def build_index_from_hdf(file_path : str, dataset : str, index_type : str) -> fa
             index.nprobe = 8
         return index
 
-def get_dataset_names(hdf5_file : str) -> dict:
+def get_dataset_names(hdf5_file : str, only_model : str = "") -> dict:
     datasets = {}
     
     with h5py.File(hdf5_file, 'r') as file:
         for model in file.keys():
             if model == 'mapping':
                 continue
+
+            if only_model != "" and model != only_model:
+                continue    
+
             for type in file.get(model):
                 source_dataset = f"/{model}/{type}/en_cirrussearch"
                 query_dataset  = f"/{model}/{type}/lv_cirrussearch"
@@ -109,7 +113,7 @@ if __name__ == '__main__':
     logger    = logging.getLogger(__name__)
     hdf5_file = PATH_DATASET + "embeddings.hdf5"
     kNN       = [1, 5, 10, 20]
-    datasets  = get_dataset_names(hdf5_file)
+    datasets  = get_dataset_names(hdf5_file, "LASER")
     for index_type in index_types:
         
         if index_type == 'FlatL2':

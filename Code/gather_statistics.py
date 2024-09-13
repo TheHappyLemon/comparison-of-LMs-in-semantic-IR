@@ -1,14 +1,14 @@
 import os
 import csv
 import logging
-from constants import PATH_SEARCH_FLATIP, PATH_SEARCH_FLATL2, PATH_SEARCH_HNSWFLAT, PATH_SEARCH_IVFFLAT, PATH_LOGS
+from constants import PATH_SEARCH_FLATIP, PATH_SEARCH_FLATL2, PATH_SEARCH_HNSWFLAT, PATH_SEARCH_IVFFLAT, PATH_SEARCH_FLATIP_NORMALIZED, PATH_LOGS
 
 # Configure logging
 logging.basicConfig(
     level=logging.DEBUG,
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', 
     handlers=[
-        logging.FileHandler(PATH_LOGS + "statistics.log")
+        logging.FileHandler(PATH_LOGS + "statistics_new.log")
     ]
 )
 
@@ -24,14 +24,15 @@ if __name__ == '__main__':
     logger = logging.getLogger(__name__)
     TOTAL = 77736
     index_types   = {
-        'FlatL2'   : PATH_SEARCH_FLATL2,
-        'FlatIP'   : PATH_SEARCH_FLATIP, 
-        'HNSWFlat' : PATH_SEARCH_HNSWFLAT,
-        'IVFFlat'  : PATH_SEARCH_IVFFLAT
+        'FlatL2'           : PATH_SEARCH_FLATL2,
+        'FlatIP'           : PATH_SEARCH_FLATIP, 
+        'FlatIPNormalized' : PATH_SEARCH_FLATIP_NORMALIZED, 
+        'HNSWFlat'         : PATH_SEARCH_HNSWFLAT,
+        'IVFFlat'          : PATH_SEARCH_IVFFLAT
     }
 
     for index in index_types:
-        result_file = f"Results_{index}.csv"
+        result_file = f"Results_{index}_new.csv"
         path_to_dir = index_types[index]
         output_file = os.path.join(path_to_dir, result_file)
         i = 0
@@ -43,7 +44,7 @@ if __name__ == '__main__':
             
             for root, dirs, files in os.walk(path_to_dir):
                 #only csv, not output file, then sort by name length, if length same, then alhpabetically.
-                files = sorted([f for f in files if f.endswith('.csv') and f != result_file], key=lambda x: (len(x), x))
+                files = sorted([f for f in files if f.endswith('.csv') and f != result_file and not f.endswith('_old.csv') ], key=lambda x: (len(x), x))
                 if len(files) != 0:
                     logger.info(f"Analyzing {root}")
 
