@@ -1,25 +1,18 @@
 import h5py
 import logging
-from constants import PATH_LOGS, PATH_DATASET, CHUNK_SIZE, PATH_SEARCH_FLATIP_NORMALIZED
+from constants import PATH_LOGS, PATH_DATASET, CHUNK_SIZE, PATH_SEARCH_NORMALIZED_HNSW, PATH_SEARCH_NORMALIZED_IVF, PATH_SEARCH_NORMALIZED_FLATL2,  PATH_SETUP
 import faiss
 import numpy as np
 import csv
 import os
 from io import TextIOWrapper
 from datetime import datetime
+from json import load as j_load
 
 csv_header    = ['query_file', 'found', 'search_result', 'search_distances']
 ignore_zeroes = True
-index_types   = ['FlatIP'] 
-
-# Configure logging
-logging.basicConfig(
-    level=logging.DEBUG,
-    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', 
-    handlers=[
-        logging.FileHandler(PATH_LOGS + "search_NORMALIZED.log")
-    ]
-)
+index_types_allowed = ['FlatL2', 'HNSWFlat', 'IVFFlat'] 
+index_types   = [] 
 
 def get_np_array_zero_rows(np_array):
     return np.where(~np.any(np_array, axis=1))[0]
@@ -38,11 +31,24 @@ def build_index_from_hdf(file_path : str, dataset : str, index_type : str) -> fa
         limit = file[dataset].shape[0]
         
         dimensions = file[dataset].shape[1]
+        normalized_vectors = file[dataset][:limit]
+        faiss.normalize_L2(normalized_vectors)
+
+        if index_type == 'FlatL2':
+            index = faiss.IndexFlatL2(dimensions)
+            index.add(normalized_vectors)
         if index_type == 'FlatIP':
             index = faiss.IndexFlatIP(dimensions)
-            normalized_vectors = file[dataset][:limit]
-            faiss.normalize_L2(normalized_vectors)
             index.add(normalized_vectors)
+        if index_type == 'HNSWFlat':
+            index = faiss.IndexHNSWFlat(dimensions, 64)
+            index.add(normalized_vectors)
+        if index_type == 'IVFFlat':
+            quantizer = faiss.IndexFlatIP(dimensions)
+            index = faiss.IndexIVFFlat(quantizer, dimensions, 128)
+            index.train(normalized_vectors)
+            index.add(normalized_vectors)
+            index.nprobe = 8
         return index
 
 def get_dataset_names(hdf5_file : str, only_model : str = "") -> dict:
@@ -102,14 +108,46 @@ def search_in_dataset(path_to_csv : str, index : faiss.IndexHNSWFlat, query_data
             logger.info(f"Flushed '{len(csv_rows)}' search results to csv file")
 
 if __name__ == '__main__':
+
+    with open(PATH_SETUP + "models.json", 'r') as f:
+        models_dict = j_load(f)
+    models_dict["LASER"] = "null"
+    models_dict["SONAR"] = "null"
+    choosen_model = input("Enter model name: ")
+    if choosen_model == "ALL":
+        choosen_model = ""
+    elif choosen_model not in models_dict:
+        print(f"Bad model choosen!\nOnly: '{', '.join(sorted(list(models_dict.keys())))}'")
+        exit()
+
+    choosen_index = input("Enter index name: ")
+    if choosen_index not in index_types_allowed:
+        print(f"Bad index choosen!\nOnly: '{', '.join(sorted(index_types_allowed))}'")
+        exit()
+    index_types.append(choosen_index)
+
+    logging.basicConfig(
+        level=logging.DEBUG,
+        format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', 
+        handlers=[
+            logging.FileHandler(PATH_LOGS + f"search_NORMALIZED_{choosen_model}_{choosen_index}.log")
+        ]
+    )
+
     logger    = logging.getLogger(__name__)
     hdf5_file = PATH_DATASET + "embeddings.hdf5"
     kNN       = [1, 5, 10, 20]
-    datasets  = get_dataset_names(hdf5_file)
+
+    datasets  = get_dataset_names(hdf5_file, choosen_model)
+
     for index_type in index_types:
         
-        if index_type == 'FlatIP':
-            path_search_result = PATH_SEARCH_FLATIP_NORMALIZED
+        if index_type == 'FlatL2':
+            path_search_result = PATH_SEARCH_NORMALIZED_FLATL2
+        elif index_type == 'HNSWFlat':
+            path_search_result = PATH_SEARCH_NORMALIZED_HNSW
+        elif index_type == 'IVFFlat':
+            path_search_result = PATH_SEARCH_NORMALIZED_IVF
         else:
             logger.error(f"Unmapped index type f{index_type}!")
             exit()

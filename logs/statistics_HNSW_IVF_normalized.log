@@ -72,3 +72,40 @@
 2024-09-14 14:57:50,707 - __main__ - INFO - Results for C:\Univer\3_kurs\comparison-of-LLMs-in-semantic-IR\Results_IVF_NORMALIZED\SONAR\source\1NN.csv: 'SONAR', 'source', '1NN', '35417', '0.4556061541628075', '45.56061541628075', '45.56'
 2024-09-14 14:57:50,707 - __main__ - INFO - Analyzing C:\Univer\3_kurs\comparison-of-LLMs-in-semantic-IR\Results_IVF_NORMALIZED\SONAR\title
 2024-09-14 14:57:50,729 - __main__ - INFO - Results for C:\Univer\3_kurs\comparison-of-LLMs-in-semantic-IR\Results_IVF_NORMALIZED\SONAR\title\1NN.csv: 'SONAR', 'title', '1NN', '48357', '0.6220669959864156', '62.206699598641556', '62.21'
+2024-09-14 22:47:14,448 - __main__ - INFO - Start analyzing results for index type IVFFlatNormalized
+2024-09-14 22:47:14,448 - __main__ - INFO - Analyzing C:\Univer\3_kurs\comparison-of-LLMs-in-semantic-IR\Results_IVF_NORMALIZED\distiluse-base\open
+2024-09-14 22:47:14,464 - __main__ - INFO - Results for C:\Univer\3_kurs\comparison-of-LLMs-in-semantic-IR\Results_IVF_NORMALIZED\distiluse-base\open\1NN.csv: 'distiluse-base', 'open', '1NN', '54259', '0.6979906349696409', '69.79906349696408', '69.8'
+2024-09-14 22:47:14,464 - __main__ - INFO - Analyzing C:\Univer\3_kurs\comparison-of-LLMs-in-semantic-IR\Results_IVF_NORMALIZED\distiluse-base\source
+2024-09-14 22:47:14,479 - __main__ - INFO - Results for C:\Univer\3_kurs\comparison-of-LLMs-in-semantic-IR\Results_IVF_NORMALIZED\distiluse-base\source\1NN.csv: 'distiluse-base', 'source', '1NN', '53831', '0.6924848204178244', '69.24848204178244', '69.25'
+2024-09-14 22:47:14,479 - __main__ - INFO - Analyzing C:\Univer\3_kurs\comparison-of-LLMs-in-semantic-IR\Results_IVF_NORMALIZED\distiluse-base\title
+2024-09-14 22:47:14,511 - __main__ - INFO - Results for C:\Univer\3_kurs\comparison-of-LLMs-in-semantic-IR\Results_IVF_NORMALIZED\distiluse-base\title\1NN.csv: 'distiluse-base', 'title', '1NN', '34567', '0.4446717093753216', '44.46717093753216', '44.47'
+2024-09-14 22:47:14,511 - __main__ - INFO - Analyzing C:\Univer\3_kurs\comparison-of-LLMs-in-semantic-IR\Results_IVF_NORMALIZED\distiluse-base-v2\open
+2024-09-14 22:47:14,526 - __main__ - INFO - Results for C:\Univer\3_kurs\comparison-of-LLMs-in-semantic-IR\Results_IVF_NORMALIZED\distiluse-base-v2\open\1NN.csv: 'distiluse-base-v2', 'open', '1NN', '54259', '0.6979906349696409', '69.79906349696408', '69.8'
+2024-09-14 22:47:14,526 - __main__ - INFO - Analyzing C:\Univer\3_kurs\comparison-of-LLMs-in-semantic-IR\Results_IVF_NORMALIZED\distiluse-base-v2\source
+2024-09-14 22:47:14,542 - __main__ - INFO - Results for C:\Univer\3_kurs\comparison-of-LLMs-in-semantic-IR\Results_IVF_NORMALIZED\distiluse-base-v2\source\1NN.csv: 'distiluse-base-v2', 'source', '1NN', '53831', '0.6924848204178244', '69.24848204178244', '69.25'
+2024-09-14 22:47:14,542 - __main__ - INFO - Analyzing C:\Univer\3_kurs\comparison-of-LLMs-in-semantic-IR\Results_IVF_NORMALIZED\distiluse-base-v2\title
+2024-09-14 22:47:14,558 - __main__ - INFO - Results for C:\Univer\3_kurs\comparison-of-LLMs-in-semantic-IR\Results_IVF_NORMALIZED\distiluse-base-v2\title\1NN.csv: 'distiluse-base-v2', 'title', '1NN', '34567', '0.4446717093753216', '44.46717093753216', '44.47'
+2024-09-14 22:47:14,558 - __main__ - INFO - Analyzing C:\Univer\3_kurs\comparison-of-LLMs-in-semantic-IR\Results_IVF_NORMALIZED\LASER\open
+2024-09-14 22:47:14,582 - __main__ - INFO - Results for C:\Univer\3_kurs\comparison-of-LLMs-in-semantic-IR\Results_IVF_NORMALIZED\LASER\open\1NN.csv: 'LASER', 'open', '1NN', '26515', '0.3410903571061027', '34.10903571061027', '34.11'
+2024-09-14 22:47:14,582 - __main__ - INFO - Analyzing C:\Univer\3_kurs\comparison-of-LLMs-in-semantic-IR\Results_IVF_NORMALIZED\LASER\source
+2024-09-14 22:47:14,597 - __main__ - INFO - Results for C:\Univer\3_kurs\comparison-of-LLMs-in-semantic-IR\Results_IVF_NORMALIZED\LASER\source\1NN.csv: 'LASER', 'source', '1NN', '9321', '0.11990583513430071', '11.990583513430071', '11.99'
+2024-09-14 22:47:14,597 - __main__ - INFO - Analyzing C:\Univer\3_kurs\comparison-of-LLMs-in-semantic-IR\Results_IVF_NORMALIZED\LASER\title
+2024-09-14 22:47:14,597 - __main__ - INFO - Results for C:\Univer\3_kurs\comparison-of-LLMs-in-semantic-IR\Results_IVF_NORMALIZED\LASER\title\1NN.csv: 'LASER', 'title', '1NN', '4696', '0.06040959143768653', '6.040959143768653', '6.04'
+2024-09-14 22:47:14,597 - __main__ - INFO - Analyzing C:\Univer\3_kurs\comparison-of-LLMs-in-semantic-IR\Results_IVF_NORMALIZED\paraphrase-MiniLM-L12\open
+2024-09-14 22:47:14,628 - __main__ - INFO - Results for C:\Univer\3_kurs\comparison-of-LLMs-in-semantic-IR\Results_IVF_NORMALIZED\paraphrase-MiniLM-L12\open\1NN.csv: 'paraphrase-MiniLM-L12', 'open', '1NN', '57157', '0.735270659668622', '73.52706596686221', '73.53'
+2024-09-14 22:47:14,628 - __main__ - INFO - Analyzing C:\Univer\3_kurs\comparison-of-LLMs-in-semantic-IR\Results_IVF_NORMALIZED\paraphrase-MiniLM-L12\source
+2024-09-14 22:47:14,643 - __main__ - INFO - Results for C:\Univer\3_kurs\comparison-of-LLMs-in-semantic-IR\Results_IVF_NORMALIZED\paraphrase-MiniLM-L12\source\1NN.csv: 'paraphrase-MiniLM-L12', 'source', '1NN', '56568', '0.7276937326335289', '72.76937326335289', '72.77'
+2024-09-14 22:47:14,643 - __main__ - INFO - Analyzing C:\Univer\3_kurs\comparison-of-LLMs-in-semantic-IR\Results_IVF_NORMALIZED\paraphrase-MiniLM-L12\title
+2024-09-14 22:47:14,659 - __main__ - INFO - Results for C:\Univer\3_kurs\comparison-of-LLMs-in-semantic-IR\Results_IVF_NORMALIZED\paraphrase-MiniLM-L12\title\1NN.csv: 'paraphrase-MiniLM-L12', 'title', '1NN', '28524', '0.36693423896264277', '36.69342389626428', '36.69'
+2024-09-14 22:47:14,659 - __main__ - INFO - Analyzing C:\Univer\3_kurs\comparison-of-LLMs-in-semantic-IR\Results_IVF_NORMALIZED\paraphrase-mpnet\open
+2024-09-14 22:47:14,675 - __main__ - INFO - Results for C:\Univer\3_kurs\comparison-of-LLMs-in-semantic-IR\Results_IVF_NORMALIZED\paraphrase-mpnet\open\1NN.csv: 'paraphrase-mpnet', 'open', '1NN', '64796', '0.8335391581763919', '83.35391581763919', '83.35'
+2024-09-14 22:47:14,675 - __main__ - INFO - Analyzing C:\Univer\3_kurs\comparison-of-LLMs-in-semantic-IR\Results_IVF_NORMALIZED\paraphrase-mpnet\source
+2024-09-14 22:47:14,690 - __main__ - INFO - Results for C:\Univer\3_kurs\comparison-of-LLMs-in-semantic-IR\Results_IVF_NORMALIZED\paraphrase-mpnet\source\1NN.csv: 'paraphrase-mpnet', 'source', '1NN', '64189', '0.8257306781928578', '82.57306781928578', '82.57'
+2024-09-14 22:47:14,690 - __main__ - INFO - Analyzing C:\Univer\3_kurs\comparison-of-LLMs-in-semantic-IR\Results_IVF_NORMALIZED\paraphrase-mpnet\title
+2024-09-14 22:47:14,706 - __main__ - INFO - Results for C:\Univer\3_kurs\comparison-of-LLMs-in-semantic-IR\Results_IVF_NORMALIZED\paraphrase-mpnet\title\1NN.csv: 'paraphrase-mpnet', 'title', '1NN', '36177', '0.4653828342080889', '46.53828342080889', '46.54'
+2024-09-14 22:47:14,706 - __main__ - INFO - Analyzing C:\Univer\3_kurs\comparison-of-LLMs-in-semantic-IR\Results_IVF_NORMALIZED\SONAR\open
+2024-09-14 22:47:14,722 - __main__ - INFO - Results for C:\Univer\3_kurs\comparison-of-LLMs-in-semantic-IR\Results_IVF_NORMALIZED\SONAR\open\1NN.csv: 'SONAR', 'open', '1NN', '28506', '0.3667026860142019', '36.67026860142019', '36.67'
+2024-09-14 22:47:14,722 - __main__ - INFO - Analyzing C:\Univer\3_kurs\comparison-of-LLMs-in-semantic-IR\Results_IVF_NORMALIZED\SONAR\source
+2024-09-14 22:47:14,737 - __main__ - INFO - Results for C:\Univer\3_kurs\comparison-of-LLMs-in-semantic-IR\Results_IVF_NORMALIZED\SONAR\source\1NN.csv: 'SONAR', 'source', '1NN', '35417', '0.4556061541628075', '45.56061541628075', '45.56'
+2024-09-14 22:47:14,737 - __main__ - INFO - Analyzing C:\Univer\3_kurs\comparison-of-LLMs-in-semantic-IR\Results_IVF_NORMALIZED\SONAR\title
+2024-09-14 22:47:14,753 - __main__ - INFO - Results for C:\Univer\3_kurs\comparison-of-LLMs-in-semantic-IR\Results_IVF_NORMALIZED\SONAR\title\1NN.csv: 'SONAR', 'title', '1NN', '48357', '0.6220669959864156', '62.206699598641556', '62.21'

@@ -1,14 +1,14 @@
 import os
 import csv
 import logging
-from constants import PATH_SEARCH_FLATIP, PATH_SEARCH_FLATL2, PATH_SEARCH_HNSWFLAT, PATH_SEARCH_IVFFLAT, PATH_SEARCH_FLATIP_NORMALIZED, PATH_SEARCH_NORMALIZED_HNSW, PATH_SEARCH_NORMALIZED_IVF, PATH_LOGS
+from constants import PATH_SEARCH_FLATIP, PATH_SEARCH_FLATL2, PATH_SEARCH_HNSWFLAT, PATH_SEARCH_IVFFLAT, PATH_SEARCH_FLATIP_NORMALIZED, PATH_SEARCH_NORMALIZED_HNSW, PATH_SEARCH_NORMALIZED_IVF, PATH_LOGS, PATH_SEARCH_NORMALIZED_FLATL2
 
 # Configure logging
 logging.basicConfig(
     level=logging.DEBUG,
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', 
     handlers=[
-        logging.FileHandler(PATH_LOGS + "statistics_HNSW_IVF_normalized.log")
+        logging.FileHandler(PATH_LOGS + "statistics_HNSW_IVF_FLATL2_normalized.log")
     ]
 )
 
@@ -24,8 +24,10 @@ if __name__ == '__main__':
     logger = logging.getLogger(__name__)
     TOTAL = 77736
     index_types   = {
-        'HNSWFlatNormalized' : PATH_SEARCH_NORMALIZED_HNSW,
-        'IVFFlatNormalized'  : PATH_SEARCH_NORMALIZED_IVF
+        'IVFFlatNormalized'  : PATH_SEARCH_NORMALIZED_IVF,
+        'FlatL2Normalized'  : PATH_SEARCH_NORMALIZED_FLATL2,
+        'HNSWFlatNormalized'  : PATH_SEARCH_NORMALIZED_HNSW
+        
         #'FlatL2'           : PATH_SEARCH_FLATL2,
         #'FlatIP'           : PATH_SEARCH_FLATIP, 
         #'FlatIPNormalized' : PATH_SEARCH_FLATIP_NORMALIZED, 

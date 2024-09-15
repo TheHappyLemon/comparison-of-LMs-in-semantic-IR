@@ -1,0 +1,12 @@
+2024-09-15 11:54:17,729 - __main__ - INFO - Start working on index type HNSWFlat
+2024-09-15 11:54:34,067 - __main__ - INFO - Succefully created index for dataset '/paraphrase-mpnet/open/en_cirrussearch'
+2024-09-15 11:54:34,067 - __main__ - INFO - Searching consequently for each element of '/paraphrase-mpnet/open/lv_cirrussearch'. k = '1'. Output to 'C:\Univer\3_kurs\comparison-of-LLMs-in-semantic-IR\Results_HNSW_NORMALIZED_REAL\paraphrase-mpnet\open\1NN.csv'. Start time = '2024-09-15 11:54:34.067452'
+2024-09-15 11:54:34,067 - h5py._conv - DEBUG - Creating converter from 3 to 5
+2024-09-15 11:54:49,500 - __main__ - INFO - Flushed '500' search results to csv file
+2024-09-15 11:55:04,664 - __main__ - INFO - Flushed '500' search results to csv file
+2024-09-15 11:55:22,701 - __main__ - INFO - Flushed '500' search results to csv file
+2024-09-15 11:55:39,337 - __main__ - INFO - Flushed '500' search results to csv file
+2024-09-15 11:55:56,562 - __main__ - INFO - Flushed '500' search results to csv file
+2024-09-15 11:56:12,604 - __main__ - INFO - Flushed '500' search results to csv file
+2024-09-15 11:56:27,845 - __main__ - INFO - Flushed '500' search results to csv file
+2024-09-15 11:56:44,070 - __main__ - INFO - Flushed '500' search results to csv file

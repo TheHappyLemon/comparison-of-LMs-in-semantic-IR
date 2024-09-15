@@ -7599,3 +7599,7 @@
 2024-09-13 01:53:49,966 - __main__ - INFO - Flushed '500' search results to csv file
 2024-09-13 01:53:54,896 - __main__ - INFO - Flushed '235' search results to csv file
 2024-09-13 01:53:54,896 - __main__ - INFO - Done. Execution time = '0:26:54.436779'
+2024-09-14 23:00:43,694 - __main__ - INFO - Start working on index type FlatL2
+2024-09-14 23:00:44,025 - __main__ - INFO - Succefully created index for dataset '/LASER/open/en_cirrussearch'
+2024-09-14 23:00:44,025 - __main__ - INFO - Searching consequently for each element of '/LASER/open/lv_cirrussearch'. k = '1'. Output to 'C:\Univer\3_kurs\comparison-of-LLMs-in-semantic-IR\Results_FLATL2\LASER\open\1NN.csv'. Start time = '2024-09-14 23:00:44.025623'
+2024-09-14 23:00:44,025 - h5py._conv - DEBUG - Creating converter from 3 to 5
