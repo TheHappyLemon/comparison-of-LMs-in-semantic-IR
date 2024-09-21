@@ -3,7 +3,7 @@ import csv
 from datetime import timedelta
 
 lines = []
-with open(PATH_DATASET + "time.log", 'r', encoding='utf-8', newline='') as f:
+with open(PATH_DATASET + "time_merged_pretified.log", 'r', encoding='utf-8', newline='') as f:
     lines = f.readlines()
 
 with open(PATH_DATASET + "spent_time.csv", 'w', encoding='utf-8', newline='') as out_file:
@@ -42,7 +42,7 @@ with open(PATH_DATASET + "spent_time.csv", 'w', encoding='utf-8', newline='') as
                         'model' : model,
                         'text_type' : text_type,
                         'K' : k,
-                        'time_human' : search_time,
+                        'time_human' : f'"{search_time}"',
                         'time_seconds' : time_seconds,
                         'time_minutes' : time_minutes,
                         'time_hours' : time_hours
