@@ -1,0 +1,65 @@
+from constants import PATH_LOGS, PATH_DATASET
+import csv
+from datetime import timedelta
+
+lines = []
+with open(PATH_DATASET + "time.log", 'r', encoding='utf-8', newline='') as f:
+    lines = f.readlines()
+
+with open(PATH_DATASET + "spent_time.csv", 'w', encoding='utf-8', newline='') as out_file:
+    
+    fieldnames = ['index', 'model', 'text_type', 'K', 'time_human', 'time_seconds', 'time_minutes', 'time_hours']
+    writer = csv.DictWriter(out_file, fieldnames=fieldnames)
+    writer.writeheader()
+
+    data = []
+    current_index = ""
+    dataset       = ""
+    model         = ""
+    text_type     = ""
+    model         = ""
+    k             = ""
+    search_time   = ""
+    timde_delta_obj = None
+    for line in lines:
+        line = line.strip('\n')
+        line = line.replace('\r', '')
+        params = line.split(" ")
+        try:
+            # detect current search result
+            if f"{params[7]} {params[8]} {params[9]} {params[10]}" == "Done. Execution time =":
+                search_time = params[11].strip("'")
+                (h, m, s) = search_time.split(':')
+                seconds, microseconds = map(float, s.split('.'))
+                time_delta_obj = timedelta(hours=int(h), minutes=int(m), seconds=int(seconds), microseconds=int(microseconds))
+                time_seconds = time_delta_obj.total_seconds()
+                time_minutes = round(time_delta_obj.total_seconds() / 60, 6)
+                time_hours   = round(time_delta_obj.total_seconds() / 3600, 6)
+
+                data.append(
+                    {
+                        'index' : current_index,
+                        'model' : model,
+                        'text_type' : text_type,
+                        'K' : k,
+                        'time_human' : search_time,
+                        'time_seconds' : time_seconds,
+                        'time_minutes' : time_minutes,
+                        'time_hours' : time_hours
+                    }
+                )
+
+            # detect new index
+            if f"{params[7]} {params[8]} {params[9]} {params[10]} {params[11]}" == "Start working on index type":
+                current_index = params[12]
+            # detect new search
+            if f"{params[7]} {params[8]} {params[9]} {params[10]} {params[11]} {params[12]}" == "Searching consequently for each element of":
+                dataset = params[13].split("/")
+                model = dataset[1]
+                text_type = dataset[2]
+                k = params[16].strip("'")
+                k = k.strip("'.")
+            #    print(current_index, model, text_type, )
+        except IndexError:
+            continue
+    writer.writerows(data)
