@@ -1,4 +1,4 @@
-from constants import PATH_SETUP, PATH_LOGS, PATH_DATASET, BATCH_SIZE, ALLOWED_DIRS
+from constants import PATH_LOGS, PATH_DATASET, ALLOWED_DIRS
 import logging
 import os
 import csv
@@ -9,7 +9,7 @@ logging.basicConfig(
     level=logging.DEBUG,
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', 
     handlers=[
-        logging.FileHandler(PATH_LOGS + "calc_text_length_stats.log")
+        logging.FileHandler(PATH_LOGS + "calc_text_words_stats.log")
     ]
 )
 
@@ -33,8 +33,9 @@ class TextType:
             with open(root + os.path.sep + file, 'r', encoding='utf-8') as current_file:
                 text = current_file.readlines()
                 text = text[0]
-                logger.info(f"{dir_name}: Length of {file} is {len(text)}")
-                magnitudes.append(len(text))
+                words = text.split(" ")
+                logger.info(f"{dir_name}: Words amount in {file} is {len(words)}")
+                magnitudes.append(len(words))
 
     def map_namings(self, type : str) -> str:
         if type == "title":
@@ -49,7 +50,7 @@ if __name__ == '__main__':
     text_type = TextType()
     csv_header = ["Language", "Text_type", "Mean", "Median", "Standard_deviation", "texts_amount", "total_length", "min_length", "max_length"]
 
-    with open(PATH_DATASET + "text_magnitudes.csv", 'w', encoding='utf-8', newline='') as csv_file:
+    with open(PATH_DATASET + "text_words_amount.csv", 'w', encoding='utf-8', newline='') as csv_file:
 
         csv_writer = csv.DictWriter(csv_file, delimiter=';', fieldnames=csv_header)
         csv_writer.writeheader()
