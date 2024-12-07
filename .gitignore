@@ -2,3 +2,4 @@
 **.pyc
 Code/__pycache__
 Dataset/embeddings*.hdf5
+lvs_sentences.tsv
