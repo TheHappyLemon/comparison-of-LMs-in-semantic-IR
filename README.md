@@ -1,2 +1,2 @@
-# comparison-of-LLMs-in-semantic-IR
-Comparison of methods for multilingual semantic search focusing on Latvian and English languages
+# comparison-of-LMs-in-semantic-IR
+Comparison of Language Models for English-Latvian Semantic Search
