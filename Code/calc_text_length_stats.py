@@ -38,12 +38,15 @@ class TextType:
                 magnitudes.append(len(words))
 
     def map_namings(self, type : str) -> str:
+        # Initially I`ve been using these terms.
         if type == "title":
             return "Title"
         elif type == "open":
             return "Introduction"
         elif type == "source":
-            return "Body"
+            return "Full text"
+        else:
+            return type
 
 if __name__ == '__main__':
     logger = logging.getLogger(__name__)

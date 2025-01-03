@@ -127,7 +127,7 @@ if __name__ == "__main__":
     model_builder = ModelBuilder(PATH_SETUP + "models.json")
 
     wiki_pages = get_wiki_pages_from_csv(PATH_DATASET + 'results_cirrussearch_ALL_common.csv')
-    wiki_types = ['title', 'open', 'source']
+    wiki_types = ['title', 'introduction', 'full-text']
     wiki_languages = ['en_cirrussearch', 'lv_cirrussearch']
     models = model_builder.get_models()
 

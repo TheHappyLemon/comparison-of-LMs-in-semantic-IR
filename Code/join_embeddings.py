@@ -21,22 +21,12 @@ def copy_dataset(source_file_path, source_dataset_path, target_file_path, target
                 #print('deleted', target_dataset_path)
             target_file.create_dataset(target_dataset_path, data=data)
             logger.info(f"Data copied from file {source_file_path} dataset {source_dataset_path} to file {target_dataset_path} dataset {target_file_path}")
-        
-'''source_files = {
-    'embeddings_sonar_en_open.hdf5'  : '/SONAR/open/en_cirrussearch',
-    'embeddings_sonar_en_source.hdf5': '/SONAR/source/en_cirrussearch',
-    'embeddings_sonar_en_title.hdf5' : '/SONAR/title/en_cirrussearch',
-    'embeddings_sonar_lv_open.hdf5'  : '/SONAR/open/lv_cirrussearch',
-    'embeddings_sonar_lv_source.hdf5': '/SONAR/source/lv_cirrussearch',
-    'embeddings_sonar_lv_title.hdf5' : '/SONAR/title/lv_cirrussearch'
-}
-'''
 
 source_files = {
-    '1' : '/LASER/open/en_cirrussearch',
-    '2' : '/LASER/open/lv_cirrussearch',
-    '3' : '/LASER/source/en_cirrussearch',
-    '4' : '/LASER/source/lv_cirrussearch',
+    '1' : '/LASER/introduction/en_cirrussearch',
+    '2' : '/LASER/introduction/lv_cirrussearch',
+    '3' : '/LASER/full-text/en_cirrussearch',
+    '4' : '/LASER/full-text/lv_cirrussearch',
     '5' : '/LASER/title/en_cirrussearch',
     '6' : '/LASER/title/lv_cirrussearch'
 }

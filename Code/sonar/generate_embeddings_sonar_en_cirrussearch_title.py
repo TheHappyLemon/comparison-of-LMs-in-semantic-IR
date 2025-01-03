@@ -112,7 +112,7 @@ if __name__ == "__main__":
     logger = logging.getLogger(__name__)
 
     wiki_pages = get_wiki_pages_from_csv(PATH_DATASET + 'results_cirrussearch_ALL_common.csv')
-    wiki_types = ['title', 'open', 'source']
+    wiki_types = ['title', 'introduction', 'full-text']
     wiki_languages = ['en_cirrussearch', 'lv_cirrussearch']
 
     create_hdf5_structure(PATH_DATASET + "embeddings_sonar.hdf5", "SONAR", wiki_types, wiki_languages, wiki_pages)
